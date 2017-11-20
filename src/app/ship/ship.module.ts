@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { ShipComponent } from './ship.component';
 
-import { Ship } from './ship';
 import { ShipService } from './ship.service';
 
 @NgModule({

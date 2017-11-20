@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShipComponent } from './ship/ship.component';
 
 const appRoutes: Routes = [
-    { path: '', component: ShipComponent, outlet: 'ship' },
+    { path: '', component: ShipComponent},
     { path: '**', redirectTo: '', pathMatch: 'full'}
 ]
 

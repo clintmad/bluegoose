@@ -4,12 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 
 var app = express();
+mongoose.connect('mongodb://user:user1@honolulu-shard-00-00-kzhox.mongodb.net:27017,honolulu-shard-00-01-kzhox.mongodb.net:27017,honolulu-shard-00-02-kzhox.mongodb.net:27017/honolulu?ssl=true&replicaSet=Honolulu-shard-0&authSource=admin');
 
 
 // uncomment after placing your favicon in /public
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/', index);
+app.use(index);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
