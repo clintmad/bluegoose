@@ -1,9 +1,5 @@
-import 'rxjs/add/operator/switchMap';
-import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
 import { ShipService } from './ship.service';
-import { Ship } from './ship.models';
 
 @Component({
   selector: 'ship',
@@ -12,17 +8,16 @@ import { Ship } from './ship.models';
 })
 export class ShipComponent implements OnInit {
 
-   ships: Ship[];
+    ships: Array<any>;
 
   constructor(
-    private service: ShipService,
-    private route: ActivatedRoute
+    private shipService: ShipService
   ) { }
 
   ngOnInit() {
-    this.service.getShip().subscribe(
-      (ships: Ship[]) => this.ships = ships
-    );
+    this.shipService.getShips().subscribe(
+      res => this.ships = res
+    )
   }
 
 }

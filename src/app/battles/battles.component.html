@@ -1,0 +1,6 @@
+<div *ngFor="let battle of battles">
+  <a href="{{ battle.url }}" target="_blank">
+    <h3 class="about-head stroke">{{ battle.name }}</h3>
+  </a>
+  <p class="about-text stroke">{{ battle.date | date: 'longDate' }}</p>
+</div>

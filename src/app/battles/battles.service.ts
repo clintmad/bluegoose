@@ -3,14 +3,14 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class ShipService {
+export class BattlesService {
 
     result: any;
 
     constructor(private http: Http) { }
 
-    getShips() {
-        return this.http.get('/ship')
+    getBattles() {
+        return this.http.get('/battles')
             .map(result => this.result = result.json().data);
     }
 }

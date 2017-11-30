@@ -1,15 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var Ship = require('../models/ship');
-
+/* GET home page. */
 router.get('/', function(req, res, next) {
-    Ship.find({}, (error, docs) => {
-        if(err) {
-            res.send(err);
-        }
-        res.render(JSON.stringify(docs));
-    });
+  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;

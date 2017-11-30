@@ -3,14 +3,18 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class ShipService {
+export class AccountsService {
 
     result: any;
 
     constructor(private http: Http) { }
 
-    getShips() {
-        return this.http.get('/ship')
+    getAccounts() {
+        return this.http.get('/accounts')
             .map(result => this.result = result.json().data);
+    }
+    getAccount(id: string | string) {
+        return this.getAccounts()
+            .map(accounts => accounts.find(account => account._id == id));
     }
 }

@@ -1,0 +1,34 @@
+<div class="container-fluid sec-person">
+    <section class="row">
+        <div *ngIf="person">
+            <h1 class="name stroke">{{person.name}}</h1>
+            <h4 class="service stroke">{{person.birth | date: 'longDate'}} to {{person.death | date: 'longDate'}}</h4>
+            <h2 class="nickname stroke">{{person.nickname}}</h2>
+            <div class="img-flex">
+                <img class="crew-image" src="{{person.image}}" alt="">
+            </div>
+            <div>
+                <h3 class="head stroke">Served</h3>
+                <p class="service stroke">{{ person.service.start | date: 'longDate'}} to {{person.service.end | date: 'longDate'}}</p>
+            </div>
+            <div>
+                <h3 class="head stroke">Occupation</h3>
+                <p class="service stroke">{{person.occupation.title}}</p>
+                <p class="service stroke">{{person.occupation.rate}}</p>
+                <p class="service stroke">{{person.occupation.rank}}</p>
+            </div>
+            <div>
+                <h3 class="head stroke">Awards</h3>
+                <div  *ngFor="let award of person.awards">
+                    <p class="service stroke">{{award.name}}</p>
+                    <p class="awards stroke" *ngIf="award.silverstars">- Silverstars: {{award.silverstars}}</p>
+                    <p class="awards stroke" *ngIf="award.bronzestars">- Bronzestars: {{award.bronzestars}}</p>
+                    <p class="awards stroke" *ngIf="award.clasp">- Clasp: {{award.clasp}}</p>
+                </div>
+            </div>
+            <div class="btn-flex">
+                <button class="back-btn stroke" (click)="gotoCrew()">Return</button>
+            </div>
+        </div>
+    </section>
+</div>

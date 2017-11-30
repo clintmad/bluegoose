@@ -1,0 +1,70 @@
+
+.name {
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    font-size: 70px;
+    color: white;
+}
+.nickname {
+    font-family: 'Lily Script One', cursive;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+.head {
+    padding-top: 20px;
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+.about-crew {
+    padding-top: 20px;
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+.about-head {
+    padding-top: 5px;
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+.about-text {
+    font-family: 'Alegreya SC', serif;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.view-crew {
+    font-family: 'Lily Script One', cursive;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+@media only screen and (max-width: 500px) {
+    .name {
+        font-size: 35px;
+    }
+    .nickname {
+        font-size: 20px;
+    }
+    .head {
+        font-size: 25px;
+    }
+    .about-crew {
+        font-size: 20px;
+    }
+    .about-head {
+        font-size: 20px;
+    }
+    .about-text {
+        font-size: 15px;
+    }
+    .view-crew {
+        font-size: 15px;
+    }
+ }

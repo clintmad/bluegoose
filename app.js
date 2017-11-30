@@ -7,20 +7,26 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-
+var ship = require('./routes/ship');
+var crew = require('./routes/crew');
+var battles = require('./routes/battles');
+var accounts = require('./routes/accounts');
 var app = express();
-mongoose.connect('mongodb://user:user1@honolulu-shard-00-00-kzhox.mongodb.net:27017,honolulu-shard-00-01-kzhox.mongodb.net:27017,honolulu-shard-00-02-kzhox.mongodb.net:27017/honolulu?ssl=true&replicaSet=Honolulu-shard-0&authSource=admin');
 
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use(index);
+app.use('/', index);
+app.use('/ship', ship);
+app.use('/people', crew);
+app.use('/battles', battles);
+app.use('/accounts', accounts);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
