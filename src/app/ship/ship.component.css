@@ -44,6 +44,16 @@
     font-size: 25px;
     color: white;
 }
+.flex-ship {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.ship-image {
+    height: 35%;
+    width: 35%;
+}
 
 @media only screen and (max-width: 500px) {
     .name {

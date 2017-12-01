@@ -12,12 +12,12 @@
     <h2 class="head stroke">About the Blue Goose</h2>
     <h3 class="about-crew stroke">Crew of the Blue Goose</h3>
     <a routerLink="/crew" routerLinkActive="active">
-      <h4 class="view-crew stroke">View</h4>
+      <h4 class="view-crew stroke">Meet the Crew</h4>
     </a>
     <router-outlet></router-outlet>
 
     <h3 class="about-head stroke">Class</h3>
-    <p class="about-text stroke">Brooklyn-class</p>
+    <p class="about-text stroke">Brooklyn</p>
     <h3 class="about-head stroke">Type</h3>
     <p class="about-text stroke">Cruiser</p>
     <h3 class="about-head stroke">Hull Symbol</h3>
@@ -72,5 +72,18 @@
   <section class=" row">
     <h2 class="head stroke">Personal Accounts</h2>
     <router-outlet name="accounts"></router-outlet>
+  </section>
+</div>
+
+<div class="container-fluid sec-images">
+  <section class=" row">
+    <h2 class="head stroke">Images</h2>
+    <div *ngFor="let ship of ships">
+      <div *ngFor="let image of ship.images">
+        <div class="flex-ship">
+          <img class="ship-image" src="{{image.url}}" alt="">
+        </div>
+      </div>
+    </div>
   </section>
 </div>

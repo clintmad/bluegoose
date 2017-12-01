@@ -4,3 +4,50 @@
     font-size: 25px;
     color: white;
 }
+.title {
+    padding-top: 20px;
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+}
+.author {
+    padding-top: 20px;
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.company {
+    font-family: 'Spectral SC', serif;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.content {
+    font-family: 'Alegreya SC', serif;
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+@media only screen and (max-width: 1050px) {
+    .title-text {
+        font-size: 20px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .author {
+        font-size: 20px;
+    }
+    .company {
+        font-size: 20px;
+    }
+    .content {
+        font-size: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

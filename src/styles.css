@@ -10,7 +10,10 @@ html, body {
 .sec-heading {
     min-height: 100%;
     max-height: auto;
-    background-image: url("assets/images/honolulu.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/honolulu.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,16 +23,23 @@ html, body {
 .sec-about {
     min-height: 100%;
     max-height: auto;
-    background-image: url("assets/images/starboard.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/starboard.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 40px;
 }
 .sec-crew {
     min-height: 100%;
     max-height: auto;
-    background-image: url("assets/images/crewtwo.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/crewtwo.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,16 +48,23 @@ html, body {
 .sec-battles {
     min-height: 100%;
     max-height: auto;
-    background-image: url("assets/images/battle.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/battle.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 40px;
 }
 .sec-person {
     min-height: 100%;
     max-height: auto;
-    background-image: url("assets/images/honoluluthree.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/honoluluthree.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,11 +73,27 @@ html, body {
 .sec-accounts {
     min-height: 100%;
     max-height: auto;
-    background-image: url("assets/images/honolulu-back.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/honolulu-back.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.sec-account {
+    min-height: 100%;
+    max-height: auto;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/honolulu-harbor.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 .stroke{   
     text-shadow:
@@ -76,6 +109,7 @@ html, body {
     font-size: 30px;
     color: white;
     padding-top: 30px;
+    padding-bottom: 40px;
     background:none;
     border: none;
 }
@@ -86,23 +120,47 @@ html, body {
 
 @media only screen and (max-width: 1050px) {
   .sec-heading {
-      background-image: url("assets/images/honolulu-tall.jpg");
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/honolulu-tall.jpg");
       padding-top: 100px;
   }
   .sec-about {
-      background-image: url("assets/images/honolulutwo.jpg");
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/honolulutwo.jpg");
   }
   .sec-crew {
-      background-image: url("assets/images/crew.jpg");
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/crew.jpg");
   }
   .sec-battles {
-    background-image: url("assets/images/guam.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/guam.jpg");
   }
   .sec-person {
-    background-image: url("assets/images/honolulu-back2.jpg");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/honolulu-back2.jpg");
   }
   .sec-accounts {
-      background-image: url("assets/images/hole.jpg");
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/hole.jpg");
+  }
+  .sec-account {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/damaged.jpg");
   }
   .back-btn {
     font-size: 15px;

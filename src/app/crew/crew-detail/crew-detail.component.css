@@ -51,6 +51,7 @@
 .crew-image {
     height: 35%;
     width: 35%;
+    border-radius: 25px;
 }
 
 @media only screen and (max-width: 500px) {
