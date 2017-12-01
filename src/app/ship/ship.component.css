@@ -19,7 +19,7 @@
     color: white;
 }
 .about-crew {
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: 'Spectral SC', serif;
     text-align: center;
     font-size: 35px;
@@ -37,6 +37,16 @@
     text-align: center;
     font-size: 25px;
     color: white;
+}
+.info-text {
+    font-family: 'Alegreya SC', serif;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;
+    width: 100%;
 }
 .view-crew {
     font-family: 'Lily Script One', cursive;
@@ -58,6 +68,9 @@
     padding:20px;
     margin: 15px;
     width: 40%;
+}
+.wiki {
+    color: black;
 }
 
 @media only screen and (max-width: 500px) {

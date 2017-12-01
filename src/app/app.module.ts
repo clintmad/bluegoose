@@ -7,10 +7,9 @@ import { Router } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CrewRoutingModule } from './crew/crew-routing.module';
 
 import { ShipComponent } from './ship/ship.component';
-import { CrewListComponent } from './crew/crew-list/crew-list.component';
-import { CrewDetailComponent } from './crew/crew-detail/crew-detail.component';
 import { BattlesComponent } from './battles/battles.component';
 import { AccountsListComponent } from './accounts/accounts-list/accounts-list.component';
 
@@ -26,6 +25,7 @@ import { CrewModule } from './crew/crew.module';
     CrewModule,
     BrowserModule,
     AppRoutingModule,
+    CrewRoutingModule,
     HttpModule
   ],
   providers: [],

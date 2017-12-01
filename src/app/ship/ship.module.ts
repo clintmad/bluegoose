@@ -10,6 +10,7 @@ import { ShipComponent } from './ship.component';
 import { BattlesComponent } from '../battles/battles.component';
 import { AccountsListComponent } from '../accounts/accounts-list/accounts-list.component';
 import { AccountsDetailComponent } from '../accounts/accounts-detail/accounts-detail.component';
+import { ShipImagesComponent } from './ship-images/ship-images.component';
 
 import { CrewModule } from '../crew/crew.module';
 import { AppRoutingModule } from '../app-routing.module';
@@ -30,7 +31,8 @@ import { AccountsService } from '../accounts/accounts.service';
         ShipComponent,
         BattlesComponent,
         AccountsListComponent,
-        AccountsDetailComponent
+        AccountsDetailComponent,
+        ShipImagesComponent
     ],
     providers: [
         ShipService,

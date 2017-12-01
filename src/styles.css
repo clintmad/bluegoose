@@ -81,6 +81,7 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 }
 .sec-account {
     min-height: 100%;
@@ -113,6 +114,14 @@ html, body {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
+}
+.stroke-white{   
+    text-shadow:
+         0.5px 0.5px 0 rgb(255, 255, 255),
+        -0.5px -0.5px 0 rgb(255, 255, 255),  
+        0.5px -0.5px 0 rgb(255, 255, 255),
+        -0.5px 0.5px 0 rgb(255, 255, 255),
+        0.5px 0.5px 0 rgb(255, 255, 255);
 }
 .back-btn {
     text-align: center;
