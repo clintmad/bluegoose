@@ -1,13 +1,11 @@
-<div class="container-fluid sec-crew">
-  <section class=" row">
-    <h2 class="crew-head stroke">Crew of the Blue Goose</h2>
-    <ul class="ul-flex">
-      <li *ngFor="let person of crew">
-        <a class="crew-name stroke" [routerLink]="['/crew', person._id]">{{ person.name }}</a>
-      </li>
-    </ul>
-    <div class="btn-flex">
-      <button class="back-btn stroke" (click)="gotoHome()">Return</button>
-    </div>
-  </section>
-</div>
+<section class="container-fluid sec-crew">
+  <h2 class="crew-head stroke">Crew of the Blue Goose</h2>
+  <ul class="ul-flex">
+    <li *ngFor="let person of crew">
+      <a class="crew-name stroke" [routerLink]="['/crew', person._id]">{{ person.name }}</a>
+    </li>
+  </ul>
+  <div class="btn-flex">
+    <button class="back-btn stroke" (click)="gotoHome()">Return</button>
+  </div>
+</section>

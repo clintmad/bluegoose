@@ -1,89 +1,80 @@
-<div class="container-fluid sec-heading">
-  <section class=" row">
-    <div *ngFor="let ship of ships">
-      <h1 class="name stroke">{{ ship.name }}</h1>
-      <h3 class="nickname stroke">{{ ship.nickname }}</h3>
-    </div>
-  </section>
-</div>
+<section class="container-fluid sec-heading">
+  <div *ngFor="let ship of ships">
+    <h1 class="name stroke">{{ ship.name }}</h1>
+    <h3 class="nickname stroke">{{ ship.nickname }}</h3>
+  </div>
+</section>
 
-<div class="container-fluid sec-about">
-  <section class=" row">
-    <h2 class="head stroke">About the Blue Goose</h2>
-    <h3 class="about-crew stroke">Crew of the Blue Goose</h3>
-    <a routerLink="/crew" routerLinkActive="active">
-      <h4 class="view-crew stroke">Meet the Crew</h4>
-    </a>
-    <router-outlet></router-outlet>
+<section class="container-fluid sec-about">
+  <h2 class="head stroke">About the Blue Goose</h2>
+  <h3 class="about-crew stroke">Crew of the Blue Goose</h3>
+  <a routerLink="/crew" routerLinkActive="active">
+    <h4 class="view-crew stroke">Meet the Crew</h4>
+  </a>
+  <router-outlet></router-outlet>
 
-    <h3 class="about-head stroke">Class</h3>
-    <p class="about-text stroke">Brooklyn</p>
-    <h3 class="about-head stroke">Type</h3>
-    <p class="about-text stroke">Cruiser</p>
-    <h3 class="about-head stroke">Hull Symbol</h3>
-    <p class="about-text stroke">CL-48</p>
-    <h3 class="about-head stroke">Code Letters</h3>
-    <p class="about-text stroke">NEKJ</p>
-    <h3 class="about-head stroke">Sponsored By</h3>
-    <p class="about-text stroke">Helen Poindexter</p>
-    <h3 class="about-head stroke">Ordered</h3>
-    <p class="about-text stroke">February 13, 1929</p>
-    <h3 class="about-head stroke">Launched</h3>
-    <p class="about-text stroke">August 26, 1937</p>
-    <h3 class="about-head stroke">Commissioned</h3>
-    <p class="about-text stroke">June 15, 1938</p>
-    <h3 class="about-head stroke">Decommissioned</h3>
-    <p class="about-text stroke">February 3, 1947</p>
-    <h3 class="about-head stroke">Fate</h3>
-    <p class="about-text stroke">Sold as scrap on November 17, 1959</p>
-  </section>
-</div>
+  <h3 class="about-head stroke">Class</h3>
+  <p class="about-text stroke">Brooklyn</p>
+  <h3 class="about-head stroke">Type</h3>
+  <p class="about-text stroke">Cruiser</p>
+  <h3 class="about-head stroke">Hull Symbol</h3>
+  <p class="about-text stroke">CL-48</p>
+  <h3 class="about-head stroke">Code Letters</h3>
+  <p class="about-text stroke">NEKJ</p>
+  <h3 class="about-head stroke">Sponsored By</h3>
+  <p class="about-text stroke">Helen Poindexter</p>
+  <h3 class="about-head stroke">Ordered</h3>
+  <p class="about-text stroke">February 13, 1929</p>
+  <h3 class="about-head stroke">Launched</h3>
+  <p class="about-text stroke">August 26, 1937</p>
+  <h3 class="about-head stroke">Commissioned</h3>
+  <p class="about-text stroke">June 15, 1938</p>
+  <h3 class="about-head stroke">Decommissioned</h3>
+  <p class="about-text stroke">February 3, 1947</p>
+  <h3 class="about-head stroke">Fate</h3>
+  <p class="about-text stroke">Sold as scrap on November 17, 1959</p>
+</section>
 
-<div class="container-fluid sec-battles">
-  <section class=" row">
-    <h2 class="head stroke">Battles</h2>
+<section class="container-fluid sec-battles">
+  <h2 class="head stroke">Battles</h2>
 
-    <router-outlet name="battles"></router-outlet>
+  <router-outlet name="battles"></router-outlet>
 
-    <h2 class="head stroke">Battlestars and Awards</h2>
-    <h3 class="about-head stroke">Battlestars</h3>
-    <p class="about-text stroke">Aleutian Campaign</p>
-    <p class="about-text stroke">Battle of Tassafaronga</p>
-    <p class="about-text stroke">Landings on New Georgia</p>
-    <p class="about-text stroke">Battle of Kolombangara</p>
-    <p class="about-text stroke">Invasion of Saipan</p>
-    <p class="about-text stroke">Invasion of Guam</p>
-    <p class="about-text stroke">Invasion of Palau Islands</p>
-    <p class="about-text stroke">Invasion of Philippine Islands</p>
-    <h3 class="about-head stroke">Awards</h3>
-    <p class="about-text stroke">American Defense Service Medal</p>
-    <p class="about-text stroke">Navy Unit Commendation</p>
-    <p class="about-text stroke">Combat Action Ribbon</p>
-    <p class="about-text stroke">Navy Presidential Unit Citation</p>
-    <p class="about-text stroke">American Campaign Medal</p>
-    <p class="about-text stroke">Asiatic Pacific Campaign Medal</p>
-    <p class="about-text stroke">World War II Victory Medal</p>
-    <p class="about-text stroke">Philippine Presidential Unit Citation</p>
-    <p class="about-text stroke">Philippine Liberation Medal</p>
-  </section>
-</div>
+  <h2 class="head stroke">Battlestars and Awards</h2>
+  <h3 class="about-head stroke">Battlestars</h3>
+  <p class="about-text stroke">Aleutian Campaign</p>
+  <p class="about-text stroke">Battle of Tassafaronga</p>
+  <p class="about-text stroke">Landings on New Georgia</p>
+  <p class="about-text stroke">Battle of Kolombangara</p>
+  <p class="about-text stroke">Invasion of Saipan</p>
+  <p class="about-text stroke">Invasion of Guam</p>
+  <p class="about-text stroke">Invasion of Palau Islands</p>
+  <p class="about-text stroke">Invasion of Philippine Islands</p>
+  <h3 class="about-head stroke">Awards</h3>
+  <p class="about-text stroke">American Defense Service Medal</p>
+  <p class="about-text stroke">Navy Unit Commendation</p>
+  <p class="about-text stroke">Combat Action Ribbon</p>
+  <p class="about-text stroke">Navy Presidential Unit Citation</p>
+  <p class="about-text stroke">American Campaign Medal</p>
+  <p class="about-text stroke">Asiatic Pacific Campaign Medal</p>
+  <p class="about-text stroke">World War II Victory Medal</p>
+  <p class="about-text stroke">Philippine Presidential Unit Citation</p>
+  <p class="about-text stroke">Philippine Liberation Medal</p>
+</section>
 
-<div class="container-fluid sec-accounts">
-  <section class=" row">
-    <h2 class="head stroke">Personal Accounts</h2>
-    <router-outlet name="accounts"></router-outlet>
-  </section>
-</div>
+<section class="container-fluid sec-accounts">
+  <h2 class="head stroke">Personal Accounts</h2>
+  <router-outlet name="accounts"></router-outlet>
+</section>
 
-<div class="container-fluid sec-images">
-  <section class=" row">
-    <h2 class="head stroke">Images</h2>
-    <div *ngFor="let ship of ships">
-      <div *ngFor="let image of ship.images">
-        <div class="flex-ship">
-          <img class="ship-image" src="{{image.url}}" alt="">
-        </div>
+<section class="container-fluid sec-images">
+  <h2 class="head stroke">Images</h2>
+  <div *ngFor="let ship of ships">
+    <div class="flex-ship">
+      <div class="card" *ngFor="let image of ship.images">
+        <img class="ship-image" src="{{image.url}}" alt="">
       </div>
     </div>
-  </section>
-</div>
+  </div>
+
+</section>

@@ -92,8 +92,19 @@ html, body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;    
+}
+.sec-images {
+    min-height: 100%;
+    max-height: auto;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url("assets/images/backgrounds/starboard2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    
 }
 .stroke{   
     text-shadow:
@@ -162,6 +173,12 @@ html, body {
         rgba(0, 0, 0, 0.5)
       ),url("assets/images/backgrounds/damaged.jpg");
   }
+  .sec-images {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("assets/images/backgrounds/honolulu-tall2.jpg");
+}
   .back-btn {
     font-size: 15px;
   }

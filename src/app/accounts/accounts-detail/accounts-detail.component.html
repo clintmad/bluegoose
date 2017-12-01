@@ -1,14 +1,12 @@
-<div class="container-fluid sec-account">
-    <section class="row">
-        <div *ngIf="account" class="stroke">
-            <h2 class="title">{{account.title}}</h2>
-            <h3 class="author">Author: {{account.author}}</h3>
-            <h4 class="company">{{account.company}}</h4>
-            <h4 class="company">{{account.date | date: 'longDate' }}</h4>
-            <p class="content">{{account.content}}</p>
-        </div>
-        <div class="btn-flex">
-            <button class="back-btn stroke" (click)="gotoHome()">Return</button>
-        </div>
-    </section>
-</div>
+<section class="container-fluid sec-account">
+    <div *ngIf="account" class="stroke">
+        <h2 class="title">{{account.title}}</h2>
+        <h3 class="author">Author: {{account.author}}</h3>
+        <h4 class="company">{{account.company}}</h4>
+        <h4 class="company">{{account.date | date: 'longDate' }}</h4>
+        <p class="content">{{account.content}}</p>
+    </div>
+    <div class="btn-flex">
+        <button class="back-btn stroke" (click)="gotoHome()">Return</button>
+    </div>
+</section>
