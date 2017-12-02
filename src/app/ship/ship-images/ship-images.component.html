@@ -3,7 +3,7 @@
     <div *ngFor="let ship of ships">
         <div class="flex-ship">
             <div class="card" *ngFor="let image of ship.images">
-                <img class="ship-image" src="{{image.url}}" alt="">
+                <img class="ship-image" src="{{image.url}}">
                 <p class="about-image stroke">{{ image.about }}</p>
                 <p class="about-image stroke">{{ image.source }}</p>
             </div>
@@ -16,7 +16,10 @@
         <div class="flex-cr">
             <p class="about-image stroke">Pictures and content retrieved from: </p>
             <a href="http://www.navsource.org/archives/04/048/04048.htm" target="_blank">
-                <p class="about-image stroke">Navsource Online: Cruiser Photo Archive</p>
+                <p class="image-cr stroke">Navsource Online: Cruiser Photo Archive</p>
+            </a>
+            <a href="https://www.facebook.com/USS-Honolulu-Reunion-CL-48-123672064311726/" target="_blank">
+                <p class="image-cr stroke">USS Honolulu Reunion CL-48</p>
             </a>
         </div>
     </div>

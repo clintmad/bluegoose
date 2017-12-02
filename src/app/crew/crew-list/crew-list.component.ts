@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CrewListComponent implements OnInit {
 
-    crew: Array<any>;
+  crew: Array<any>;
 
   constructor(
     private crewService: CrewService,
@@ -22,8 +22,8 @@ export class CrewListComponent implements OnInit {
       res => this.crew = res
     )
   }
-  gotoHome() {        
+  gotoHome() {
     this.router.navigate([''])
-}
+  }
 
 }

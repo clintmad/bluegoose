@@ -3,7 +3,6 @@ import { Component, OnInit, HostBinding, OnChanges } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { DatePipe } from '@angular/common';
-
 import { CrewService } from '../crew.service';
 
 @Component({
@@ -22,11 +21,11 @@ export class CrewDetailComponent {
     router.events.subscribe(val => {
       this.getPersonByRouteId()
     })
-   }
+  }
 
   getPersonByRouteId() {
-      var id = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-      this.service.getPerson(id).subscribe(person => this.person = person);
+    var id = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+    this.service.getPerson(id).subscribe(person => this.person = person);
   }
 
   gotoCrew() {

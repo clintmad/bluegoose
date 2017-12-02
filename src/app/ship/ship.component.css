@@ -76,7 +76,7 @@
 }
 .wiki {
     color: black;
-    padding: 5px;
+    margin: 10px;
 }
 .about-image {
     font-family: 'Alegreya SC', serif;
@@ -84,6 +84,12 @@
     font-size: 15px;
     color: white;
     padding-top: 10px;
+}
+.image-cr {
+    font-family: 'Alegreya SC', serif;
+    text-align: center;
+    font-size: 15px;
+    color: white;
 }
 
 @media only screen and (max-width: 500px) {

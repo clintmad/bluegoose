@@ -9,16 +9,13 @@ import { DatePipe } from '@angular/common';
 })
 export class ShipComponent implements OnInit {
 
-    ships: Array<any>;
+  ships: Array<any>;
 
-  constructor(
-    private shipService: ShipService
-  ) { }
+  constructor(private shipService: ShipService) { }
 
   ngOnInit() {
     this.shipService.getShips().subscribe(
       res => this.ships = res
     )
   }
-
 }

@@ -13,5 +13,4 @@ export class AwardsService {
         return this.http.get('/awards')
             .map(result => this.result = result.json().data);
     }
-
 }

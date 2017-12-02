@@ -9,16 +9,13 @@ import { DatePipe } from '@angular/common';
 })
 export class AwardsComponent implements OnInit {
 
-    awards: Array<any>;
+  awards: Array<any>;
 
-  constructor(
-    private awardsService: AwardsService
-  ) { }
+  constructor(private awardsService: AwardsService) { }
 
   ngOnInit() {
     this.awardsService.getAwards().subscribe(
       res => this.awards = res
     )
   }
-
 }

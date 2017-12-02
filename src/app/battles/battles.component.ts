@@ -9,16 +9,13 @@ import { DatePipe } from '@angular/common';
 })
 export class BattlesComponent implements OnInit {
 
-    battles: Array<any>;
+  battles: Array<any>;
 
-  constructor(
-    private battlesService: BattlesService
-  ) { }
+  constructor(private battlesService: BattlesService) { }
 
   ngOnInit() {
     this.battlesService.getBattles().subscribe(
       res => this.battles = res
     )
   }
-
 }

@@ -22,11 +22,11 @@ export class AccountsDetailComponent {
     router.events.subscribe(val => {
       this.getAccountByRouteId()
     })
-   }
+  }
 
   getAccountByRouteId() {
-      var id = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
-      this.service.getAccount(id).subscribe(account => this.account = account);
+    var id = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+    this.service.getAccount(id).subscribe(account => this.account = account);
   }
 
   gotoHome() {

@@ -10,15 +10,12 @@ export class AccountsListComponent implements OnInit {
 
   accounts: Array<any>;
 
-  constructor(
-    private accountsService: AccountsService
-  ) { }
+  constructor(private accountsService: AccountsService) { }
 
   ngOnInit() {
     this.accountsService.getAccounts().subscribe(
       res => this.accounts = res
     )
   }
-
 }
 
