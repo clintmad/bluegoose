@@ -1,0 +1,12 @@
+<h3 class="about-head stroke">Battlestars</h3>
+<div *ngFor="let award of awards">
+    <div *ngIf="award.type == 'Battlestar'">
+        <p class="about-text stroke">{{ award.name }}</p>
+    </div>
+</div>
+<h3 class="about-head stroke">Awards</h3>
+<div *ngFor="let award of awards">
+    <div *ngIf="award.type == 'Award'">
+        <p class="about-text stroke">{{ award.name }}</p>
+    </div>
+</div>

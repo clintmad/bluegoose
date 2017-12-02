@@ -7,12 +7,14 @@ import { AccountsListComponent } from './accounts/accounts-list/accounts-list.co
 import { AccountsDetailComponent } from './accounts/accounts-detail/accounts-detail.component';
 import { BattlesComponent } from './battles/battles.component';
 import { ShipImagesComponent } from './ship/ship-images/ship-images.component';
+import { AwardsComponent } from './awards/awards.component';
 
 const appRoutes: Routes = [
     { 
         path: '', component: ShipComponent, children: [
             { path: '', component: BattlesComponent, outlet: 'battles' },
-            { path: '', component: AccountsListComponent, outlet: 'accounts' }     
+            { path: '', component: AccountsListComponent, outlet: 'accounts' },
+            { path: '', component: AwardsComponent, outlet: 'awards'}     
         ]
     },    
     { path: 'accounts/:id', component: AccountsDetailComponent},

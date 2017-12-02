@@ -9,10 +9,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CrewRoutingModule } from './crew/crew-routing.module';
 
-import { ShipComponent } from './ship/ship.component';
-import { BattlesComponent } from './battles/battles.component';
-import { AccountsListComponent } from './accounts/accounts-list/accounts-list.component';
-
 import { ShipModule } from './ship/ship.module';
 import { CrewModule } from './crew/crew.module';
 

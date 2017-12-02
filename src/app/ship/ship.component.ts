@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShipService } from './ship.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'ship',

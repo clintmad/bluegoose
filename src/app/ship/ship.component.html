@@ -16,27 +16,28 @@
   <a routerLink="/images" routerLinkActive="active">
     <h4 class="view-crew stroke">View</h4>
   </a>
-
-  <h3 class="about-head stroke">Class</h3>
-  <p class="about-text stroke">Brooklyn</p>
-  <h3 class="about-head stroke">Type</h3>
-  <p class="about-text stroke">Cruiser</p>
-  <h3 class="about-head stroke">Hull Symbol</h3>
-  <p class="about-text stroke">CL-48</p>
-  <h3 class="about-head stroke">Code Letters</h3>
-  <p class="about-text stroke">NEKJ</p>
-  <h3 class="about-head stroke">Sponsored By</h3>
-  <p class="about-text stroke">Helen Poindexter</p>
-  <h3 class="about-head stroke">Ordered</h3>
-  <p class="about-text stroke">February 13, 1929</p>
-  <h3 class="about-head stroke">Launched</h3>
-  <p class="about-text stroke">August 26, 1937</p>
-  <h3 class="about-head stroke">Commissioned</h3>
-  <p class="about-text stroke">June 15, 1938</p>
-  <h3 class="about-head stroke">Decommissioned</h3>
-  <p class="about-text stroke">February 3, 1947</p>
-  <h3 class="about-head stroke">Fate</h3>
-  <p class="about-text stroke">Sold as scrap on November 17, 1959</p>
+  <div *ngFor="let ship of ships">
+    <h3 class="about-head stroke">Class</h3>
+    <p class="about-text stroke">{{ ship.class }}</p>
+    <h3 class="about-head stroke">Type</h3>
+    <p class="about-text stroke">{{ ship.type }}</p>
+    <h3 class="about-head stroke">Hull Symbol</h3>
+    <p class="about-text stroke">{{ ship.hullsymbol }}</p>
+    <h3 class="about-head stroke">Code Letters</h3>
+    <p class="about-text stroke">{{ ship.codeletters }}</p>
+    <h3 class="about-head stroke">Sponsored By</h3>
+    <p class="about-text stroke">{{ ship.sponsor }}</p>
+    <h3 class="about-head stroke">Ordered</h3>
+    <p class="about-text stroke">{{ ship.ordered | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Launched</h3>
+    <p class="about-text stroke">{{ ship.launched | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Commissioned</h3>
+    <p class="about-text stroke">{{ ship.commissioned | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Decommissioned</h3>
+    <p class="about-text stroke">{{ ship.decommissioned | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Fate</h3>
+    <p class="about-text stroke">Sold as scrap on {{ ship.scrapped | date: 'longDate' }}</p>
+  </div>
 </section>
 
 <section class="container-fluid sec-battles">
@@ -45,25 +46,7 @@
   <router-outlet name="battles"></router-outlet>
 
   <h2 class="head stroke">Battlestars and Awards</h2>
-  <h3 class="about-head stroke">Battlestars</h3>
-  <p class="about-text stroke">Aleutian Campaign</p>
-  <p class="about-text stroke">Battle of Tassafaronga</p>
-  <p class="about-text stroke">Landings on New Georgia</p>
-  <p class="about-text stroke">Battle of Kolombangara</p>
-  <p class="about-text stroke">Invasion of Saipan</p>
-  <p class="about-text stroke">Invasion of Guam</p>
-  <p class="about-text stroke">Invasion of Palau Islands</p>
-  <p class="about-text stroke">Invasion of Philippine Islands</p>
-  <h3 class="about-head stroke">Awards</h3>
-  <p class="about-text stroke">American Defense Service Medal</p>
-  <p class="about-text stroke">Navy Unit Commendation</p>
-  <p class="about-text stroke">Combat Action Ribbon</p>
-  <p class="about-text stroke">Navy Presidential Unit Citation</p>
-  <p class="about-text stroke">American Campaign Medal</p>
-  <p class="about-text stroke">Asiatic Pacific Campaign Medal</p>
-  <p class="about-text stroke">World War II Victory Medal</p>
-  <p class="about-text stroke">Philippine Presidential Unit Citation</p>
-  <p class="about-text stroke">Philippine Liberation Medal</p>
+  <router-outlet name="awards"></router-outlet>
 </section>
 
 <section class="container-fluid sec-accounts">
@@ -79,6 +62,9 @@
     </a>
     <a class="wiki stroke-white" href="http://www.navsource.org/archives/04/048/04048.htm" target="_blank">
       <i class="fa fa-anchor fa-lg" aria-hidden="true"></i>
+    </a>
+    <a class="wiki stroke-white" href="https://www.history.navy.mil/search.html?q=USS+Honolulu+%28cl-48%29" target="_blank">
+      <i class="fa fa-ship fa-lg" aria-hidden="true"></i>
     </a>
   </div>
 </section>

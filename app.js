@@ -11,6 +11,7 @@ var ship = require('./routes/ship');
 var crew = require('./routes/crew');
 var battles = require('./routes/battles');
 var accounts = require('./routes/accounts');
+var awards = require('./routes/awards');
 var app = express();
 
 
@@ -27,6 +28,7 @@ app.use('/ship', ship);
 app.use('/people', crew);
 app.use('/battles', battles);
 app.use('/accounts', accounts);
+app.use('/awards', awards);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));

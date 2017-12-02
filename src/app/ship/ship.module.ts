@@ -11,6 +11,7 @@ import { BattlesComponent } from '../battles/battles.component';
 import { AccountsListComponent } from '../accounts/accounts-list/accounts-list.component';
 import { AccountsDetailComponent } from '../accounts/accounts-detail/accounts-detail.component';
 import { ShipImagesComponent } from './ship-images/ship-images.component';
+import { AwardsComponent } from '../awards/awards.component';
 
 import { CrewModule } from '../crew/crew.module';
 import { AppRoutingModule } from '../app-routing.module';
@@ -18,6 +19,7 @@ import { CrewService } from '../crew/crew.service';
 import { ShipService } from './ship.service';
 import { BattlesService } from '../battles/battles.service';
 import { AccountsService } from '../accounts/accounts.service';
+import { AwardsService } from '../awards/awards.service';
 
 @NgModule({
     imports: [
@@ -32,12 +34,14 @@ import { AccountsService } from '../accounts/accounts.service';
         BattlesComponent,
         AccountsListComponent,
         AccountsDetailComponent,
-        ShipImagesComponent
+        ShipImagesComponent,
+        AwardsComponent
     ],
     providers: [
         ShipService,
         BattlesService,
-        AccountsService
+        AccountsService,
+        AwardsService
     ]
 })
 export class ShipModule { }
