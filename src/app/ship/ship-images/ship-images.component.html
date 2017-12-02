@@ -4,6 +4,8 @@
         <div class="flex-ship">
             <div class="card" *ngFor="let image of ship.images">
                 <img class="ship-image" src="{{image.url}}" alt="">
+                <p class="about-image stroke">{{ image.about }}</p>
+                <p class="about-image stroke">{{ image.source }}</p>
             </div>
         </div>
     </div>

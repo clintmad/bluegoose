@@ -1,22 +1,22 @@
 <section class="container-fluid sec-person">
     <div *ngIf="person">
         <h1 class="name stroke">{{person.name}}</h1>
-        <h4 class="service stroke">{{person.birth | date: 'longDate'}} to {{person.death | date: 'longDate'}}</h4>
-        <h2 class="nickname stroke">{{person.nickname}}</h2>
+        <h4 *ngIf="person.birth" class="service stroke">{{person.birth | date: 'longDate'}} to {{person.death | date: 'longDate'}}</h4>
+        <h2  class="nickname stroke">{{person.nickname}}</h2>
         <div class="img-flex">
             <img class="crew-image" src="{{person.image}}" alt="">
         </div>
-        <div>
+        <div *ngIf="person.service.start" >
             <h3 class="head stroke">Served</h3>
             <p class="service stroke">{{ person.service.start | date: 'longDate'}} to {{person.service.end | date: 'longDate'}}</p>
         </div>
-        <div>
+        <div *ngIf="person.occupation.title || person.occupation.rate || person.occupation.rank" >
             <h3 class="head stroke">Occupation</h3>
             <p class="service stroke">{{person.occupation.title}}</p>
             <p class="service stroke">{{person.occupation.rate}}</p>
             <p class="service stroke">{{person.occupation.rank}}</p>
         </div>
-        <div>
+        <div *ngIf="person.awards[0].name">
             <h3 class="head stroke">Awards</h3>
             <div *ngFor="let award of person.awards">
                 <p class="service stroke">{{award.name}}</p>

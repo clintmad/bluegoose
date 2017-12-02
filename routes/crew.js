@@ -11,7 +11,7 @@ var response = {
 };
 
 router.get('/', (req, res) => {
-    db.collection('people').find({}).toArray().then((crew) => {
+    db.collection('people').find({}).sort({name: 1}).toArray().then((crew) => {
         response.data = crew;
         res.json(response);
     })
