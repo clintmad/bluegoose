@@ -60,6 +60,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.flex-cr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .ship-image {
     width: 100%;
     border-radius: 25px;
