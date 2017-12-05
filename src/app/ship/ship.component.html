@@ -1,70 +1,67 @@
-<div class="wrapper">
+<section class="container-fluid sec-heading">
+  <div *ngFor="let ship of ships">
+    <h1 class="name stroke">{{ ship.name }}</h1>
+    <h3 class="nickname stroke">{{ ship.nickname }}</h3>
+  </div>
+</section>
 
-  <section class="container-fluid sec-heading">
-    <div *ngFor="let ship of ships">
-      <h1 class="name stroke">{{ ship.name }}</h1>
-      <h3 class="nickname stroke">{{ ship.nickname }}</h3>
-    </div>
-  </section>
+<section class="container-fluid sec-about">
+  <h2 class="head stroke">About the Blue Goose</h2>
+  <h3 class="about-crew stroke">Crew of the Blue Goose</h3>
+  <a routerLink="/crew" routerLinkActive="active">
+    <h4 class="view-crew stroke">Meet the Crew</h4>
+  </a>
+  <h3 class="about-crew stroke">Images</h3>
+  <a routerLink="/images" routerLinkActive="active">
+    <h4 class="view-crew stroke">View</h4>
+  </a>
+  <div *ngFor="let ship of ships">
+    <h3 class="about-head stroke">Class</h3>
+    <p class="about-text stroke">{{ ship.class }}</p>
+    <h3 class="about-head stroke">Type</h3>
+    <p class="about-text stroke">{{ ship.type }}</p>
+    <h3 class="about-head stroke">Hull Symbol</h3>
+    <p class="about-text stroke">{{ ship.hullsymbol }}</p>
+    <h3 class="about-head stroke">Code Letters</h3>
+    <p class="about-text stroke">{{ ship.codeletters }}</p>
+    <h3 class="about-head stroke">Sponsored By</h3>
+    <p class="about-text stroke">{{ ship.sponsor }}</p>
+    <h3 class="about-head stroke">Ordered</h3>
+    <p class="about-text stroke">{{ ship.ordered | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Launched</h3>
+    <p class="about-text stroke">{{ ship.launched | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Commissioned</h3>
+    <p class="about-text stroke">{{ ship.commissioned | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Decommissioned</h3>
+    <p class="about-text stroke">{{ ship.decommissioned | date: 'longDate' }}</p>
+    <h3 class="about-head stroke">Fate</h3>
+    <p class="about-text stroke">Sold as scrap on {{ ship.scrapped | date: 'longDate' }}</p>
+  </div>
+</section>
 
-  <section class="container-fluid sec-about">
-    <h2 class="head stroke">About the Blue Goose</h2>
-    <h3 class="about-crew stroke">Crew of the Blue Goose</h3>
-    <a routerLink="/crew" routerLinkActive="active">
-      <h4 class="view-crew stroke">Meet the Crew</h4>
+<section class="container-fluid sec-battles">
+  <h2 class="head stroke">Battles</h2>
+  <router-outlet name="battles"></router-outlet>
+  <h2 class="head stroke">Battlestars and Awards</h2>
+  <router-outlet name="awards"></router-outlet>
+</section>
+
+<section class="container-fluid sec-accounts">
+  <h2 class="head stroke">Personal Accounts</h2>
+  <router-outlet name="accounts"></router-outlet>
+  <div class="row stroke info-text">
+    <h4>Visit these pages for more information on the USS Honolulu</h4>
+    <a class="wiki stroke-white" href="https://www.facebook.com/USS-Honolulu-Reunion-CL-48-123672064311726/" target="_blank">
+      <i class="fa fa-facebook-square" aria-hidden="true"></i>
     </a>
-    <h3 class="about-crew stroke">Images</h3>
-    <a routerLink="/images" routerLinkActive="active">
-      <h4 class="view-crew stroke">View</h4>
+    <a class="wiki stroke-white" href="https://en.wikipedia.org/wiki/USS_Honolulu_(CL-48)" target="_blank">
+      <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
     </a>
-    <div *ngFor="let ship of ships">
-      <h3 class="about-head stroke">Class</h3>
-      <p class="about-text stroke">{{ ship.class }}</p>
-      <h3 class="about-head stroke">Type</h3>
-      <p class="about-text stroke">{{ ship.type }}</p>
-      <h3 class="about-head stroke">Hull Symbol</h3>
-      <p class="about-text stroke">{{ ship.hullsymbol }}</p>
-      <h3 class="about-head stroke">Code Letters</h3>
-      <p class="about-text stroke">{{ ship.codeletters }}</p>
-      <h3 class="about-head stroke">Sponsored By</h3>
-      <p class="about-text stroke">{{ ship.sponsor }}</p>
-      <h3 class="about-head stroke">Ordered</h3>
-      <p class="about-text stroke">{{ ship.ordered | date: 'longDate' }}</p>
-      <h3 class="about-head stroke">Launched</h3>
-      <p class="about-text stroke">{{ ship.launched | date: 'longDate' }}</p>
-      <h3 class="about-head stroke">Commissioned</h3>
-      <p class="about-text stroke">{{ ship.commissioned | date: 'longDate' }}</p>
-      <h3 class="about-head stroke">Decommissioned</h3>
-      <p class="about-text stroke">{{ ship.decommissioned | date: 'longDate' }}</p>
-      <h3 class="about-head stroke">Fate</h3>
-      <p class="about-text stroke">Sold as scrap on {{ ship.scrapped | date: 'longDate' }}</p>
-    </div>
-  </section>
-
-  <section class="container-fluid sec-battles">
-    <h2 class="head stroke">Battles</h2>
-    <router-outlet name="battles"></router-outlet>
-    <h2 class="head stroke">Battlestars and Awards</h2>
-    <router-outlet name="awards"></router-outlet>
-  </section>
-
-  <section class="container-fluid sec-accounts">
-    <h2 class="head stroke">Personal Accounts</h2>
-    <router-outlet name="accounts"></router-outlet>
-    <div class="row stroke info-text">
-      <h4>Visit these pages for more information on the USS Honolulu</h4>
-      <a class="wiki stroke-white" href="https://www.facebook.com/USS-Honolulu-Reunion-CL-48-123672064311726/" target="_blank">
-        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-      </a>
-      <a class="wiki stroke-white" href="https://en.wikipedia.org/wiki/USS_Honolulu_(CL-48)" target="_blank">
-        <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
-      </a>
-      <a class="wiki stroke-white" href="http://www.navsource.org/archives/04/048/04048.htm" target="_blank">
-        <i class="fa fa-anchor" aria-hidden="true"></i>
-      </a>
-      <a class="wiki stroke-white" href="https://www.history.navy.mil/search.html?q=USS+Honolulu+%28cl-48%29" target="_blank">
-        <i class="fa fa-ship" aria-hidden="true"></i>
-      </a>
-    </div>
-  </section>
-</div>
+    <a class="wiki stroke-white" href="http://www.navsource.org/archives/04/048/04048.htm" target="_blank">
+      <i class="fa fa-anchor" aria-hidden="true"></i>
+    </a>
+    <a class="wiki stroke-white" href="https://www.history.navy.mil/search.html?q=USS+Honolulu+%28cl-48%29" target="_blank">
+      <i class="fa fa-ship" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>
