@@ -158,12 +158,32 @@ html, body {
       ),url("assets/images/backgrounds/honolulu-tall.jpg");
       padding-top: 100px;
   }
-  .sec-about {
-      background: linear-gradient(
+  .sec-about::before {    
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ),url("assets/images/backgrounds/honolulutwo.jpg");
-  }
+      ),url("assets/images/backgrounds/honolulutwo.jpg") no-repeat center center;
+ 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.sec-about {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
   .sec-crew {
       background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
