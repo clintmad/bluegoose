@@ -145,12 +145,15 @@ html, body {
         rgba(0, 0, 0, 0.5)
       ),url("assets/images/backgrounds/honolulu-tall.jpg");
       padding-top: 100px;
+      background-attachment: scroll;
   }
   .sec-about {
       background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),url("assets/images/backgrounds/honolulutwo.jpg");
+      background-attachment: scroll;
+      padding-bottom: 10px;
   }
   .sec-crew {
       background-image: linear-gradient(
@@ -163,30 +166,24 @@ html, body {
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),url("assets/images/backgrounds/guam.jpg");
+      background-attachment: scroll;
+      padding-bottom: 10px;
   }
   .sec-person {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),url("assets/images/backgrounds/honolulu-back2.jpg");
+    background: rgba(0, 0, 0, 0.8);
   }
   .sec-accounts {
       background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),url("assets/images/backgrounds/hole.jpg");
+      background-attachment: scroll;
   }
   .sec-account {
-      background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),url("assets/images/backgrounds/damaged.jpg");
+    background: rgba(0, 0, 0, 0.8);;
   }
   .sec-images {
-    background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),url("assets/images/backgrounds/honolulu-tall2.jpg");
+    background: rgba(0, 0, 0, 0.8);
 }
   .back-btn {
     font-size: 15px;
